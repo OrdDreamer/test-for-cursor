@@ -1,0 +1,224 @@
+:root {
+  --bg: #07010f;
+  --bg-soft: #120025;
+  --text: #f4ecff;
+  --muted: #b9a6d3;
+  --cyan: #22d3ee;
+  --pink: #ff3ea5;
+  --violet: #8b5cf6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at 10% 10%, #1d0436 0%, var(--bg) 45%);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-glow {
+  position: fixed;
+  inset: -20vmax;
+  background:
+    radial-gradient(circle at 20% 25%, rgb(34 211 238 / 18%) 0, transparent 40%),
+    radial-gradient(circle at 75% 20%, rgb(255 62 165 / 18%) 0, transparent 42%),
+    radial-gradient(circle at 55% 75%, rgb(139 92 246 / 20%) 0, transparent 45%);
+  filter: blur(14px);
+  z-index: -1;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(14px);
+  background: rgb(7 1 15 / 62%);
+  border-bottom: 1px solid rgb(139 92 246 / 28%);
+}
+
+.logo {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 10px rgb(139 92 246 / 90%);
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 12px rgb(34 211 238 / 90%);
+}
+
+main {
+  width: min(980px, calc(100% - 2.5rem));
+  margin: 2rem auto 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero {
+  padding: 2.3rem;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgb(20 3 42 / 88%), rgb(8 1 19 / 88%));
+  border: 1px solid rgb(139 92 246 / 35%);
+  box-shadow:
+    0 0 18px rgb(139 92 246 / 24%),
+    0 0 36px rgb(255 62 165 / 12%);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgb(34 211 238 / 48%);
+  color: var(--cyan);
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  margin: 0 0 0.9rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  margin-bottom: 0.85rem;
+  text-shadow: 0 0 16px rgb(255 62 165 / 35%);
+}
+
+.subtitle {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.accent {
+  color: var(--pink);
+  text-shadow: 0 0 10px rgb(255 62 165 / 90%);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.64rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  color: #10061d;
+  background: linear-gradient(120deg, var(--cyan), #7ef4ff);
+  box-shadow: 0 0 16px rgb(34 211 238 / 55%);
+}
+
+.btn-secondary {
+  color: var(--text);
+  border: 1px solid rgb(255 62 165 / 48%);
+  box-shadow: inset 0 0 16px rgb(255 62 165 / 12%);
+}
+
+.card {
+  border-radius: 18px;
+  padding: 1.35rem 1.2rem;
+  background: rgb(13 2 27 / 76%);
+  border: 1px solid rgb(139 92 246 / 30%);
+  box-shadow: 0 0 18px rgb(139 92 246 / 14%);
+}
+
+.skill-grid,
+.contacts {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.project-grid article {
+  border: 1px solid rgb(34 211 238 / 24%);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: linear-gradient(180deg, rgb(20 4 40 / 84%), rgb(10 2 21 / 84%));
+}
+
+.project-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+a {
+  color: var(--cyan);
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  margin: 1rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    width: min(980px, calc(100% - 1.25rem));
+    margin-top: 1.2rem;
+  }
+
+  .hero {
+    padding: 1.3rem;
+  }
+}

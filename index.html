@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Неонова самопрезентація</title>
+    <meta
+      name="description"
+      content="Неоновий лендінг для самопрезентації: про мене, навички, проєкти та контакти."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header class="header">
+      <a class="logo" href="#top">YOUR NAME</a>
+      <nav class="nav">
+        <a href="#about">Про мене</a>
+        <a href="#skills">Навички</a>
+        <a href="#projects">Проєкти</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="tag">Від ідеї до результату</p>
+        <h1>Я створюю сучасні цифрові продукти з характером.</h1>
+        <p class="subtitle">
+          Привіт! Я <span class="accent">YOUR NAME</span> — розробник(ця), який
+          поєднує чистий код, естетику та практичну цінність.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Звʼязатися</a>
+          <a class="btn btn-secondary" href="#projects">Переглянути роботи</a>
+        </div>
+      </section>
+
+      <section id="about" class="card">
+        <h2>Про мене</h2>
+        <p>
+          Я спеціалізуюсь на створенні швидких, зручних та візуально виразних
+          вебрішень. Працюю з фокусом на якість, підтримуваність і результат для
+          користувача.
+        </p>
+      </section>
+
+      <section id="skills" class="card">
+        <h2>Навички</h2>
+        <ul class="skill-grid">
+          <li>Frontend: HTML, CSS, JavaScript, React</li>
+          <li>Backend: Node.js, API інтеграції</li>
+          <li>Інструменти: Git, GitHub, CI/CD</li>
+          <li>Soft Skills: комунікація, відповідальність, системність</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Вибрані проєкти</h2>
+        <div class="project-grid">
+          <article>
+            <h3>Проєкт 1</h3>
+            <p>Короткий опис досягнень і технологій у проєкті.</p>
+          </article>
+          <article>
+            <h3>Проєкт 2</h3>
+            <p>Короткий опис досягнень і технологій у проєкті.</p>
+          </article>
+          <article>
+            <h3>Проєкт 3</h3>
+            <p>Короткий опис досягнень і технологій у проєкті.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Контакти</h2>
+        <p>Готовий(а) до нових викликів та співпраці.</p>
+        <ul class="contacts">
+          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>
+            LinkedIn:
+            <a href="https://linkedin.com/in/username">linkedin.com/in/username</a>
+          </li>
+          <li>GitHub: <a href="https://github.com/username">github.com/username</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> YOUR NAME. Створено в неоновому стилі.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
